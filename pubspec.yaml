@@ -1,8 +1,7 @@
 name: flutter_initials
 description: "A Package for generating initials from names."
-publish_to: "none" # Remove this line if you wish to publish to pub.dev
-# homepage:
-version: 1.0.0+1
+homepage: "https://github.com/Safiul-Lathif/flutter_initials"
+version: 1.0.1
 
 environment:
   sdk: ">=3.4.3 <4.0.0"

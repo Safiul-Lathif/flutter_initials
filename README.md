@@ -1,16 +1,73 @@
+Here's a clean and professional `README.md` file for your **flutter_initials** package:
+
+---
+
+````markdown
 # flutter_initials
 
-A new Flutter project.
+A lightweight Dart utility for extracting initials from a full name, designed for use in Flutter apps. Perfect for generating avatars, short representations of names, or tags.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Extracts the first letter of each word in a name
+- Converts to uppercase
+- Preserves numbers if found in words
+- Trims special characters
+- Limits output to 4 characters max
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Add the following to your `pubspec.yaml`:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```yaml
+dependencies:
+  flutter_initials: ^1.0.0
+```
+````
+
+Then run:
+
+```bash
+flutter pub get
+```
+
+## Usage
+
+Import the package:
+
+```dart
+import 'package:flutter_initials/flutter_initials.dart';
+```
+
+Use the utility:
+
+```dart
+String initials = FlutterInitials.getInitials("John Doe");
+print(initials); // Output: JD
+```
+
+## Examples
+
+| Input                                       | Output | Explanation                                 |
+| ------------------------------------------- | ------ | ------------------------------------------- |
+| `"John Doe"`                                | `JD`   | First letters of first and last name        |
+| `"Mary-Kate Olsen"`                         | `MK`   | Hyphen removed, initials from both words    |
+| `"Élodie Yung"`                             | `EY`   | Special characters removed                  |
+| `"Agent 47"`                                | `A47`  | Numbers preserved                           |
+| `"Albus Percival Wulfric Brian Dumbledore"` | `APWB` | Max 4 initials                              |
+| `"  jack   o'neill "`                       | `JO`   | Extra spaces and special characters cleaned |
+
+## Contributing
+
+Feel free to open issues or submit pull requests for improvements or new features.
+
+## License
+
+[MIT License](LICENSE)
+
+```
+
+---
+
+Let me know if you'd like help publishing to pub.dev or adding additional badges (e.g. build status, version, likes).
+```
