@@ -1,5 +1,5 @@
 class FlutterInitials {
-  static String getInitials(String name) {
+  static String getInitials(String name, {int maxLength = 4}) {
     List<String> words =
         name.replaceAll(RegExp(r'[^A-Za-z0-9\s]'), '').trim().split(' ');
     String initials = '';
@@ -12,10 +12,12 @@ class FlutterInitials {
           initials += word[0].toUpperCase();
         }
       }
-      if (initials.length >= 4) {
+      if (initials.length >= maxLength) {
         break;
       }
     }
-    return initials.length > 4 ? initials.substring(0, 4) : initials;
+    return initials.length > maxLength
+        ? initials.substring(0, maxLength)
+        : initials;
   }
 }
