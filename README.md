@@ -21,7 +21,7 @@ Add the following to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  flutter_initials: ^1.0.0
+  flutter_initials: ^1.0.2
 ```
 ````
 
@@ -42,7 +42,7 @@ import 'package:flutter_initials/flutter_initials.dart';
 Use the utility:
 
 ```dart
-String initials = FlutterInitials.getInitials("John Doe");
+String initials = FlutterInitials.getInitials("John Doe" , 4);
 print(initials); // Output: JD
 ```
 

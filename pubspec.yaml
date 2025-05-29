@@ -1,7 +1,7 @@
 name: flutter_initials
 description: "A Package for generating initials from names."
 homepage: "https://github.com/Safiul-Lathif/flutter_initials"
-version: 1.0.1
+version: 1.0.2
 
 environment:
   sdk: ">=3.4.3 <4.0.0"
