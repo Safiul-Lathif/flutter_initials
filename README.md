@@ -21,7 +21,7 @@ Add the following to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  flutter_initials: ^1.0.2
+  flutter_initials: ^1.0.3
 ```
 ````
 
@@ -56,6 +56,22 @@ print(initials); // Output: JD
 | `"Agent 47"`                                | `A47`  | Numbers preserved                           |
 | `"Albus Percival Wulfric Brian Dumbledore"` | `APWB` | Max 4 initials                              |
 | `"  jack   o'neill "`                       | `JO`   | Extra spaces and special characters cleaned |
+
+## Use Cases
+
+Use the utility:
+
+```dart
+String initials = FlutterInitials.toCamelCase("John Doe");
+print(initials); // Output: johnDoe
+```
+
+| Input               | Output            | Explanation                 |
+| ------------------- | ----------------- | --------------------------- |
+| `"John Doe"`        | `johnDoe`         | Camel case                  |
+| `"Mary-Kate Olsen"` | `maryKateOlsen`   | Camel case, hyphen removed  |
+| `"Mary-Kate Olsen"` | `MaryKateOlsen`   | Pascal case, hyphen removed |
+| `"Mary-Kate Olsen"` | `mary_kate_olsen` | Snake case, hyphen removed  |
 
 ## Contributing
 
