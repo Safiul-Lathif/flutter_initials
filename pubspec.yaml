@@ -1,7 +1,7 @@
 name: flutter_initials
-description: "A Package for generating initials from names."
+description: "A lightweight Dart utility for extracting initials from a full name, designed for use in Flutter apps. Perfect for generating avatars, short representations of names, or tags."
 homepage: "https://github.com/Safiul-Lathif/flutter_initials"
-version: 1.0.2
+version: 1.0.3
 
 environment:
   sdk: ">=3.4.3 <4.0.0"
